@@ -3,5 +3,5 @@ global:
 scrape_configs:
 - job_name: 'spring-endpoints'
   static_configs:
-    - targets: ['crossfit-crossbuddy.crossfit:80']
-  metric_path: '/actuator/prometheus'
+  - targets: ['crossfit-crossbuddy.crossfit:80']
+    metric_path: '/actuator/prometheus'
