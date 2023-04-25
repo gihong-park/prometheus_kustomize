@@ -1,7 +1,7 @@
 global:
   scrape_interval: 10s
 scrape_configs:
-- job_name: 'spring-endpoints'
-  static_configs:
-  - targets: ['crossfit-crossbuddy.crossfit:80']
-    metric_path: '/actuator/prometheus'
+  - job_name: prometheus
+		metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['<springboot-app-host>:<springboot-app-port>']
