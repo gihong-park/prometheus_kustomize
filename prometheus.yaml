@@ -5,7 +5,6 @@ scrape_configs:
     kubernetes_sd_configs:
     - role: pod
       namespaces:
-        own_namespace: false
         names: []
     relabel_configs:
     - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
