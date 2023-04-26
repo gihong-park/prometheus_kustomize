@@ -4,9 +4,9 @@ commonLabels:
   app.kubernetes.io/name: prometheus
   app.kubernetes.io/part-of: crossfit
 resources:
-- role.yaml
+- cluster-role.yaml
 - service-account.yaml
-- role-binding.yaml
+- cluster-role-binding.yaml
 - deployment.yaml
 - service.yaml
 images:
