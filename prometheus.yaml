@@ -27,6 +27,11 @@ scrape_configs:
     - source_labels: [__meta_kubernetes_pod_name]
       action: replace
       target_label: pod
+    - action: labelmap
+      regex: __meta_kubernetes_pod_label_(.+)
+    - source_labels: [__meta_kubernetes_namespace]
+      action: replace
+      target_label: namespace
   - job_name: "kubernetes-apiservers"
 
     kubernetes_sd_configs:
