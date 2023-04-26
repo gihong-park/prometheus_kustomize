@@ -5,6 +5,7 @@ scrape_configs:
     kubernetes_sd_configs:
     - role: pod
       namespaces:
+        own_namespace: false
         names:
         - ingress-nginx
         - crossfit
